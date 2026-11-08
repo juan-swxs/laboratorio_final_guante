@@ -1,0 +1,28 @@
+dependencies:
+  idf:
+    source:
+      type: idf
+    version: 6.1.0
+  micro-ros/micro_ros_espidf_component:
+    component_hash: aa806dce316d9ad5e188b73a290525aab1e55ea40d3e5f889c80e43ea9dd122f
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.4'
+    source:
+      pre_release: true
+      registry_url: https://components.espressif.com/
+      type: service
+    targets:
+    - esp32
+    - esp32s2
+    - esp32s3
+    - esp32c3
+    - esp32c6
+    version: 27.0.0-rolling.20260821
+direct_dependencies:
+- idf
+- micro-ros/micro_ros_espidf_component
+manifest_hash: f8e3fe53e9ef0e6a592aa8e7f08cb867b7dc69a8a48e66abcff16267a5c22a16
+target: esp32
+version: 3.0.0

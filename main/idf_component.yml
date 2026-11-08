@@ -1,0 +1,7 @@
+## IDF Component Manager Manifest File
+dependencies:
+  idf:
+    version: '>=4.1.0'
+  micro-ros/micro_ros_espidf_component:
+    version: '>=26.0.0'
+    pre_release: true

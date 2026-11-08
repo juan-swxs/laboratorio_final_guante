@@ -1,0 +1,22 @@
+menu "Enlace ESP-NOW guante -> carro"
+
+    config ESPNOW_GROUP_ID
+        int "ID del grupo (debe ser igual en el guante y en el carro)"
+        range 0 255
+        default 17
+        help
+            El guante envia por broadcast. El carro solo acepta paquetes con
+            este ID, asi el guante de otro grupo del laboratorio no mueve
+            nuestro robot. Cambialo si otro equipo usa este mismo codigo.
+
+    config ESPNOW_FALLBACK_CHANNEL
+        int "Canal WiFi cuando no hay router"
+        range 1 13
+        default 1
+        help
+            ESP-NOW solo funciona si ambos ESP32 estan en el mismo canal. Con
+            router, los dos usan el canal del router. Si un ESP32 no logra
+            conectarse, se queda en este canal fijo (el otro tambien debe
+            estar sin router para que coincidan).
+
+endmenu
